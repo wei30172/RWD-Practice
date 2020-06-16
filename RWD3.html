@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SHOP</title>
+
+	<!-- 動畫外掛--載入 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+	new WOW().init();
+
+	</script>
+
+	<!-- icon--載入 -->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	
+	<!-- google fonts--載入 -->
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sacramento&display=swap" rel="stylesheet">
+	
+	<style>
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);/* 楷書 cwtexkai */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);/* 圓體 cwtexyen */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);/* 仿宋 cwtexfangsong */
+	@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);/* 黑體 Noto Sans TC */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css);/* 明體 cwtexming */
+	@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap);
+
+	*{
+		margin: 0; 
+		padding: 0; 
+		box-sizing: border-box;
+	}
+
+	a{
+		color: #020202;
+		text-decoration: none;
+	}
+
+	/*手機*/
+	@media screen and (max-width: 500px) {
+		#content {
+			width: 100%;
+			font-family: "cwtexfangsong", 'Sacramento';
+			font-size: 22px;
+			font-weight: 400;
+			text-align: justify;
+			line-height: 32px;
+		}
+		
+		/*----header----*/
+		#content header {
+			background: url(./images/banner1.jpg) top left no-repeat;
+			background-size: cover;
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		#content header #mnav {
+			width: 100%;
+			height: 120px;
+			padding: 20px;
+			box-sizing: border-box;
+			background: #fff;
+		}
+
+		#content header nav {
+			display: none;
+		}
+
+		#content header #mnav ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#content header #mnav ul li {
+			flex: 1;
+			height: 120px;
+			position: relative;
+			text-align: center;
+		}
+		#content header #mnav ul li a {
+			width: 100%;
+			height: 120px;
+			display: block;
+		}
+		#content header #mnav ul li a:hover {
+			color: #A8A7A7;
+			background: rgba(0,0,0,0.77);
+			height: 80px;
+			transition: all 1s;
+		}
+
+		#content header nav ul li ul.sub {
+			position: absolute;
+			top: 40px;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+		}
+		#content header nav ul li:hover ul.sub {
+			display: block;
+			opacity: 1;
+			box-shadow: 0 2px 3px #2B2B2B;
+		}
+
+		#content header nav ul li>a:hover {
+			background: url(./images/nav.png) bottom center no-repeat;
+		}
+
+		#content header nav ul.sub a:hover {
+			background: rgba(0,0,0,0.4);
+			color: #FFFFFF;
+			transition: all 1.5s;
+		}
+
+		/*----banner----*/
+
+		#content #banner{
+			display: none;
+		}
+
+		/*----maincont----*/
+		#content #maincont{
+			width: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+			display: flex;
+		}
+
+		#content #maincont #mainleft{
+			flex:1;
+			min-height: 100px;
+			box-sizing: border-box;
+		}
+
+		#content #maincont #mainleft h1 {
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+			font-size: 24px;
+			margin-bottom: 16px;
+			font-weight: 300;
+		}
+
+		#content #maincont #mainright{
+			flex:1;
+			min-height: 100px;
+			display: flex;
+			display: block;
+			padding: 60px;
+			display: none;
+		}
+
+		/*----photo----*/
+
+		#content #photo{
+			width: 100%;
+			padding: 40px 30px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		#content #photo #photitle {
+			width: 100%;
+			height: 30px;
+			margin-bottom: 20px;
+		}
+		#content #photitle ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		#content #photitle ul li {
+			flex: 1;
+			height: 30px;
+			text-align: center;
+			border-left: 1px solid #D9D9D9;
+			border-right: 1px solid #D9D9D9;
+		}
+		#content #photitle ul li a:hover {
+			background: #DF668F;
+			color: #E3E3E3;
+			display: block;
+			transition: all 0.2s;
+			width: 100%;
+			height: 30px;
+		}
+
+		#content #photo #phocont {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#content #phocont .item {
+			width: 98%;
+			margin: 1%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid #D8D8D8;
+		}
+		#content #phocont .item:hover {
+			border: 1px solid #292828;
+			transition: all 1s;
+		}
+		#content #phocont .item .itemphoto {
+			margin-bottom: 15px;
+		}
+		#content #phocont .item .itemphoto img {
+			width: 100%;
+			height: auto;
+		}
+		
+		/*----footer----*/
+		#content footer{
+			width: 100%;
+			padding: 20px 10px;
+			box-sizing: border-box;
+			background: #333;
+			display: block;
+			color: #FFFFFF;
+		}
+		#content footer .footeritem {
+			width: 100%;
+			min-height: 100px;
+			padding: 20px;
+			border-top: 1px solid #5B5B5B;
+			border-bottom: 1px solid #5B5B5B;
+			box-sizing: border-box;
+			text-align: center;
+
+		}
+
+		#content footer .footeritem p {
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 24px;
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+		}
+
+		/*----contact----*/
+		#content #contact{
+			width: 100%;
+			padding: 40px 30px;
+			box-sizing: border-box;
+			background: #000;
+			color: #FFFFFF;
+			display: block;
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+			text-align: center;
+		}
+		#content #contact #design{
+			width: 100%;
+			height: 40px;
+		}
+		#content #contact #icon{
+			width: 100%;
+			height: 40px;
+		}
+	}
+
+	/*平板*/
+	@media screen and (min-width: 501px) {
+		#content {
+			width: 100%;
+			font-family: "cwtexfangsong", 'Sacramento';
+			font-weight: 600;
+			font-size: 16px;
+			text-align: justify;
+			line-height: 32px;
+		}
+		
+		/*----header----*/
+		#content header {
+			background: url(./images/header2.jpg) top center;
+			width: 100%;
+			height: 220px;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		#content header #mnav{
+			display:none;
+		}
+
+		#content header nav {
+			display: block;
+			width: 80%;
+			height: 40px;
+		}
+
+		#content header nav ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		#content header nav ul li {
+			flex: 1;
+			height: 40px;
+			position: relative;
+		}
+		#content header nav ul li a {
+			width: 100%;
+			height: 40px;
+			display: block;
+			background: #FFFFFF;
+		}
+
+		#content header nav ul li ul.sub {
+			position: absolute;
+			top: 40px;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+		}
+		#content header nav ul li:hover ul.sub {
+			display: block;
+			opacity: 1;
+			box-shadow: 0 2px 3px #2B2B2B;
+		}
+
+		#content header nav ul li>a:hover {
+			background: url(./images/nav.png) bottom center no-repeat;
+		}
+
+		#content header nav ul.sub a:hover {
+			background: rgba(0,0,0,0.4);
+			color: #FFFFFF;
+			transition: all 1.5s;
+		}
+
+		/*----banner----*/
+
+		#content #banner{
+			display: block;
+			width: 100%;
+			height: 400PX;
+			background: url(./images/banner2.jpg) center center;
+		}
+
+		/*----maincont----*/
+		#content #maincont{
+			width: 100%;
+			padding: 30px;
+			box-sizing: border-box;
+			display: flex;
+		}
+
+		#content #maincont #mainleft{
+			flex:1;
+			min-height: 100px;
+			box-sizing: border-box;
+		}
+
+		#content #maincont #mainleft h1 {
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+			margin-bottom: 20px;
+			font-weight: 300;
+		}
+
+		#content #maincont #mainright{
+			flex:1;
+			min-height: 100px;
+			display: flex;
+			display: block;
+			padding: 60px;
+			display: none;
+		}
+
+		/*----photo----*/
+
+		#content #photo{
+			width: 100%;
+			padding: 40px 30px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		#content #photo #photitle {
+			width: 100%;
+			height: 30px;
+			margin-bottom: 20px;
+		}
+		#content #photitle ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		#content #photitle ul li {
+			flex: 1;
+			height: 30px;
+			text-align: center;
+			border-left: 1px solid #D9D9D9;
+			border-right: 1px solid #D9D9D9;
+		}
+		#content #photitle ul li a:hover {
+			background: #DF668F;
+			color: #E3E3E3;
+			display: block;
+			transition: all 0.2s;
+			width: 100%;
+			height: 30px;
+		}
+
+		#content #photo #phocont {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#content #phocont .item {
+			width: 48%;
+			margin: 1%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid #D8D8D8;
+		}
+		#content #phocont .item:hover {
+			border: 1px solid #292828;
+			transition: all 1s;
+		}
+		#content #phocont .item .itemphoto {
+			margin-bottom: 15px;
+		}
+		#content #phocont .item .itemphoto img {
+			width: 100%;
+			height: auto;
+		}
+		
+		/*----footer----*/
+		#content footer{
+			width: 100%;
+			padding: 40px 30px;
+			box-sizing: border-box;
+			background: #333;
+			display: flex;
+			color: #FFFFFF;
+		}
+		#content footer .footeritem {
+			flex: 1;
+			min-height: 150px;
+			padding: 20px;
+			border-left: 1px solid #5B5B5B;
+			border-right: 1px solid #5B5B5B;
+			box-sizing: border-box;
+			text-align: center;
+
+		}
+
+		#content footer .footeritem p {
+			font-size: 14px;
+			line-height: 24px;
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+		}
+
+		/*----contact----*/
+		#content #contact{
+			width: 100%;
+			height: 40px;
+			padding: 40px 30px;
+			box-sizing: border-box;
+			background: #000;
+			color: #FFFFFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+		}
+		#content #contact #design{
+			flex: 2;
+			height: 30px;
+		}
+		#content #contact #icon{
+			flex: 1;
+			height: 30px;
+		}
+	}
+
+	/*電腦*/
+	@media screen and (min-width: 1024px) {
+		#content {
+			width: 100%;
+			font-family: "cwtexfangsong", 'Sacramento';
+			font-weight: 400;
+			font-size: 20px;
+			text-align: justify;
+			line-height: 32px;
+		}
+		
+		/*----header----*/
+		#content header {
+			background: url(./images/header1.jpg) top center;
+			width: 100%;
+			height: 220px;
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+		}
+
+		#content header #mnav{
+			display:none;
+		}
+
+		#content header nav {
+			display: block;
+			width: 80%;
+			height: 40px;
+		}
+
+		#content header nav ul {
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+		#content header nav ul li {
+			flex: 1;
+			height: 40px;
+			position: relative;
+		}
+		#content header nav ul li a {
+			width: 100%;
+			height: 40px;
+			display: block;
+			background: #FFFFFF;
+		}
+
+		#content header nav ul li ul.sub {
+			position: absolute;
+			top: 40px;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+		}
+		#content header nav ul li:hover ul.sub {
+			display: block;
+			opacity: 1;
+			box-shadow: 0 2px 3px #2B2B2B;
+		}
+
+		#content header nav ul li>a:hover {
+			background: url(./images/nav.png) bottom center no-repeat;
+		}
+
+		#content header nav ul.sub a:hover {
+			background: rgba(0,0,0,0.4);
+			color: #FFFFFF;
+			transition: all 1.5s;
+		}
+
+		/*----banner----*/
+
+		#content #banner{
+			display: block;
+			width: 100%;
+			height: 400PX;
+			background: url(./images/banner1.jpg) center center;
+		}
+
+		/*----maincont----*/
+		#content #maincont{
+			width: 100%;
+			padding: 50px 200px;
+			box-sizing: border-box;
+			display: flex;
+		}
+
+		#content #maincont #mainleft{
+			flex:4;
+			min-height: 100px;
+			padding-right: 200px;
+			box-sizing: border-box;
+		}
+
+		#content #maincont #mainleft h1 {
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+			margin-bottom: 20px;
+			font-weight: 300;
+		}
+
+		#content #maincont #mainright{
+			flex:1;
+			min-height: 100px;
+			display: flex;
+			display: block;
+			padding: 60px;
+		}
+
+		/*----photo----*/
+
+		#content #photo{
+			width: 100%;
+			padding: 40px 200px;
+			box-sizing: border-box;
+			background: #FFFFFF;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		#content #photo #photitle {
+			width: 100%;
+			height: 30px;
+			margin-bottom: 20px;
+		}
+		#content #photitle ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		#content #photitle ul li {
+			flex: 1;
+			height: 30px;
+			text-align: center;
+			border-left: 1px solid #D9D9D9;
+			border-right: 1px solid #D9D9D9;
+		}
+		#content #photitle ul li a:hover {
+			background: #DF668F;
+			color: #E3E3E3;
+			display: block;
+			transition: all 0.2s;
+			width: 100%;
+			height: 30px;
+		}
+
+		#content #photo #phocont {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#content #phocont .item {
+			width: 31%;
+			margin: 1%;
+			padding: 10px;
+			box-sizing: border-box;
+			border: 1px solid #D8D8D8;
+		}
+		#content #phocont .item:hover {
+			border: 1px solid #292828;
+			transition: all 1s;
+		}
+		#content #phocont .item .itemphoto {
+			margin-bottom: 15px;
+		}
+		#content #phocont .item .itemphoto img {
+			width: 100%;
+			height: auto;
+		}
+		
+		/*----footer----*/
+		#content footer{
+			width: 100%;
+			padding: 40px 200px;
+			box-sizing: border-box;
+			background: #333;
+			display: flex;
+			color: #FFFFFF;
+		}
+		#content footer .footeritem {
+			flex: 1;
+			min-height: 200px;
+			padding: 20px;
+			border-left: 1px solid #5B5B5B;
+			border-right: 1px solid #5B5B5B;
+			box-sizing: border-box;
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+			text-align: center;
+
+		}
+
+		#content footer .footeritem p {
+			font-size: 14px;
+			line-height: 20px;
+			font-family: "cwtexfangsong", 'Raleway', sans-serif;
+		}
+
+		/*----contact----*/
+		#content #contact{
+			width: 100%;
+			height: 40px;
+			padding: 40px 200px;
+			box-sizing: border-box;
+			background: #000;
+			color: #FFFFFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-self: center;
+		}
+		#content #contact #design{
+			flex: 2;
+			height: 30px;
+		}
+		#content #contact #icon{
+			flex: 1;
+			height: 30px;
+		}
+
+	}
+
+	</style>
+</head>
+
+<body  id="content">
+	<!-- ----header---- -->
+	<header>
+		<!-- ----手機板按鈕---- -->
+		 <div id="mnav">
+	      	<ul >
+		        <li><a href="#"><i class="fas fa-home"></i><br>
+		        	商店介紹</a></li>
+		        <li><a href="#"><i class="fas fa-gift"></i><br>
+		        	商品總覽</a></li>
+		        <li><a href="#"><i class="fas fa-list"></i><br>
+		        	購物流程</a></li>
+		        <li><a href="#"><i class="fas fa-user"></i><br>
+		        	會員管理</a></li>
+		        <li><a href="#"><i class="fas fa-shopping-cart"></i><br>
+		        	購物車</a></li>
+	      	</ul>
+	    </div>
+	    <!-- ----電腦板按鈕---- -->
+		<nav>
+			<ul>
+		        <li><a href="#">最新消息</a></li>
+		        <li><a href="#">商店介紹</a></li>
+		        <li> <a href="#">商品總覽</a>
+		          <ul class="sub">
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		          </ul>
+		        </li>
+		        <li> <a href="#">購物流程</a>
+		          <ul class="sub">
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		          </ul>
+		        </li>
+		        <li> <a href="#">會員管理</a>
+		          <ul class="sub">
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		            <li><a href="#">item1</a></li>
+		          </ul>
+		        </li>
+		        <li><a href="#">連絡我們</a></li>
+		        <li><a href="#">購物車</a></li>
+	    	</ul>
+		</nav>
+	</header>
+
+	<!-- ----banner---- -->
+	<div id='banner'></div>
+	
+	<!-- maincont -->
+	<div id='maincont'>
+		<div id='mainleft'>
+			<h1 class="wow bounceInRight" data-wow-duration="3s">OUR STORY</h1>
+      		<h3>小標</h3>
+      		<p>內容</p>
+		</div>
+		<div id='mainright'>
+			<span style="color:#333; font-size:24px; font-family: 'cwtexfangsong', 'Raleway', sans-serif;">
+				<i class="fas fa-home"></i>&nbsp;&nbsp;
+				<i class="fas fa-angle-right"></i>&nbsp;&nbsp;Home
+			</span>
+		</div>
+	</div>
+
+	<!-- ----photo---- -->
+	<div id="photo">
+		<div id="photitle">
+	      	<ul>
+		        <li><a href="#">所有商品</a></li>
+		        <li><a href="#">分類一</a></li>
+		        <li><a href="#">分類二</a></li>
+		        <li><a href="#">分類三</a></li>
+		        <li><a href="#">分類四</a></li>
+	      	</ul>
+	    </div>
+	    <div id="phocont">
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+			          <p>itemtitle</p>
+			          <h3>itemcont</h3>
+			          <p>內容</p>
+		        </div>
+		    </div>
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+		          <p>itemtitle</p>
+		          <h3>itemcont</h3>
+		          <p>內容</p>
+		        </div>
+		    </div>
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+		          <p>itemtitle</p>
+		          <h3>itemcont</h3>
+		          <p>內容</p>
+		        </div>
+		    </div>
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+		          <p>itemtitle</p>
+		          <h3>itemcont</h3>
+		          <p>內容</p>
+		        </div>
+		    </div>
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+		          <p>itemtitle</p>
+		          <h3>itemcont</h3>
+		          <p>內容</p>
+		        </div>
+		    </div>
+	    	<div class="item">
+		        <div class="itemphoto">
+		        	<a href="./images/picture1.jpg">
+		        		<img src="./images/picture2.jpg" width="375" height="255" alt=""/>
+		        	</a>
+		        </div>
+		        <div class="itemcont">
+		          <p>itemtitle</p>
+		          <h3>itemcont</h3>
+		          <p>內容</p>
+		        </div>
+		    </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- ----footer---- -->
+	<footer>
+		<div class="footeritem" style="text-align:center;">
+			<img src="./images/downlogo.png" width="146" height="136" alt=""/>
+		</div>
+	    <div class="footeritem" style="flex: 2">
+	    	<p>地址</p>
+	    	<p>ADDRESS</p>
+	    	<p>POHNE</p>
+	    	<p>FAX</p>
+	    	<p>EMAIL</p>
+	    </div>
+	    <div class="footeritem" style="flex: 2">
+	     	<div style="border:0; text-align: center;">
+		        <p>首頁</p>
+		        <p>最新消息</p>
+		        <p>商店介紹</p>
+		        <p>商品總覽</p>
+		        <p>購物流程</p>
+		        <p>會員管理</p>
+		        <p>聯絡我們</p>
+	     	</div>
+	    </div>
+	    <div class="footeritem">
+	    	<img style="width:100%; height:auto;" src="./images/banner1.jpg" width="180" height="120" alt=""/>
+	    </div>
+	</footer>
+	
+	<!-- ----contact---- -->
+	<div id="contact">
+		<div id="design">@Design</div>
+	    <div id="icon">
+	    	<i class="fab fa-twitter"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<i class="fab fa-facebook"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<i class="fab fa-line"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<i class="fab fa-youtube"></i>
+	    </div>
+	</div>
+</body>
+</html>

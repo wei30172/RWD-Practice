@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- 動畫外掛--載入 -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>new WOW().init();</script>
+
+	<!-- icon--載入 -->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	
+	<!-- google fonts--載入 -->
+	<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sacramento&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400&display=swap" rel="stylesheet">
+	
+	<style>
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexkai.css);/* 楷書 cwtexkai */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);/* 圓體 cwtexyen */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);/* 仿宋 cwtexfangsong */
+	@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);/* 黑體 Noto Sans TC */
+	@import url(https://fonts.googleapis.com/earlyaccess/cwtexming.css);/* 明體 cwtexming */
+
+	*{margin: 0; padding: 0; box-sizing: border-box;}
+
+	/*手機*/
+	@media screen and (max-width: 480px) {
+		#content{
+			margin: 5px;
+		}
+			
+		#content header{
+			width: 100%;
+			height: 40px;
+			background-color: #24774F;
+			color: #FFF;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			margin-bottom:5px;
+		}
+
+		#content nav{
+			width: 100%;
+			color: #FFF;
+			margin-bottom:5px;
+		}
+
+		#content nav ul{
+			list-style-type: none;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		#content nav ul li{
+			width: 50%;
+			height:30px; 
+			background-color: #3E8EAD;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+		}
+
+		#content nav ul li a{
+			height:30px; 
+			text-decoration: none;
+			color: #FFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#content nav ul li a:hover{
+			background-color: #4B9143;
+			color: #BAF0E8;
+			transition: all 0.5s;
+		}
+
+		/*.na{ border-right:2px solid #FFF;}*/
+		#content main{
+			width: 96%;
+			margin: 0 auto;
+			display: block;
+		}
+
+		#content main #left{
+			width: 100%;
+			margin-bottom: 5px;
+			display: flex;
+			background-color: #D6EED4;
+		}
+
+		#content main #right{
+			width: 100%;
+			min-height: 600px;
+			padding: 1%;
+			background-color: #F5F3B6;
+		}
+
+		#content main #left .item{
+			width:98%;
+			margin:5px;
+			height:300px;; 
+			background:#F3DF77; 
+			color:#5A320C; 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#content main #right p{
+			font-family:"cwtexkai"; 
+			font-size:18px; 
+			line-height:24px; 
+			text-align:justify; 
+			font-weight:600;
+		} 
+	}
+
+	/*平板*/
+	@media screen and (min-width: 481px) {
+		#content{
+			margin: 5px;
+		}
+			
+		#content header{
+			width: 100%;
+			height: 120px;
+			background-color: #EA4A47;
+			color: #FFF;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			margin-bottom:5px;
+		}
+
+		#content nav{
+			width: 100%;
+			height: 50px;
+			background-color: #EA7E47;
+			color: #FFF;
+			margin-bottom:5px;
+		}
+
+		#content nav ul{
+			list-style-type: none;
+			display: flex;
+		}
+
+		#content nav ul li{
+			flex:1;
+			height:50px; 
+			background-color: #3E8EAD;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+		}
+
+		#content nav ul li a{
+			height:50px; 
+			text-decoration: none;
+			color: #FFF;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#content nav ul li a:hover{
+			background-color: #4B9143;
+			color: #BAF0E8;
+			transition: all 0.5s;
+		}
+
+		.na{ border-right:2px solid #FFF;}
+
+		#content main{
+			width: 96%;
+			margin: 0 auto;
+			display: block;
+		}
+
+		#content main #left{
+			width: 100%;
+			margin-bottom: 5px;
+			display: flex;
+			background-color: #D6EED4;
+		}
+
+		#content main #right{
+			width: 100%;
+			min-height: 600px;
+			padding: 1%;
+			background-color: #F5F3B6;
+		}
+
+		#content main #left .item{
+			flex: 1; 
+			margin:1%; 
+			height:300px; 
+			background:#F3DF77; 
+			color:#5A320C; 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#content main #right p{
+			font-family:"cwtexkai"; 
+			font-size:18px; 
+			line-height:24px; 
+			text-align:justify; 
+			font-weight:600;
+		} 
+	}
+
+	/*電腦*/
+	@media screen and (min-width: 1024px) {
+		#content{
+			margin: 5px;
+		}
+			
+		#content header{
+			width: 100%;
+			height: 80px;
+			background-color: #0C485A;
+			color: #FFF;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			margin-bottom:5px;
+		}
+
+		#content nav{
+			width: 100%;
+			height: 50px;
+			background-color: #117285;
+			color: #FFF;
+			margin-bottom:5px;
+		}
+
+		#content nav ul{
+			list-style-type: none;
+		}
+
+		#content nav ul li{
+			width:100px;
+			height:50px; 
+			line-height:50px; 
+			background-color: #3E8EAD;
+			text-align:center;
+			border-left: 1px solid #fff;
+			border-right: 1px solid #fff;
+			float: left;
+		}
+
+		#content nav ul li a{
+			width: 100%;
+			height:50px; 
+			text-decoration: none;
+			color: #FFF;
+			display: block;
+		}
+
+		#content nav ul li a:hover{
+			background-color: #4B9143;
+			color: #BAF0E8;
+			transition: all 0.5s;
+		}
+
+		.na{ border-right:2px solid #FFF;}
+
+		#content main{
+			width: 80%;
+			min-height: 600px;
+			margin: 0 auto;
+			display: flex;
+		}
+
+		#content main #left{
+			flex: 2;
+			min-height: 600px;
+			display: block;
+		}
+
+		#content main #right{
+			flex: 3;
+			min-height: 600px;
+			padding: 1%;
+		}
+
+		#content main #left .item{
+			width:98%; 
+			margin:1%; 
+			height:300px; 
+			background:#F3DF77; 
+			color:#5A320C; 
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#content main #right p{
+			font-family:"cwtexkai"; 
+			font-size:18px; 
+			line-height:24px; 
+			text-align:justify; 
+			font-weight:600;
+		} 
+	}
+
+	</style>
+</head>
+
+<body>
+	<div id="content">
+		<header>Header</header>
+		<nav>
+			<ul>
+				<li><a href="#">nav</a></li>
+				<li><a href="#">nav</a></li>
+				<li><a href="#">nav</a></li>
+				<li><a class="na" href="#">nav</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div id="left">
+				<div class="item">item</div>
+				<div class="item">item</div>
+			</div>
+			<div id="right">
+				<p>content</p>
+			</div>
+		</main>
+	</div>
+
+</body>
+
+</html>
